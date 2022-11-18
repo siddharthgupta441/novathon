@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    android:background="@color/purple_200"
+    android:gravity="center">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/nav_header_profile_pic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:shapeAppearanceOverlay="@style/Circular"
+        android:src="@drawable/icon_profile_pic"/>
+    <TextView
+        android:id="@+id/nav_header_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textSize="23sp"
+        android:layout_marginTop="10dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:textSize="23sp"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

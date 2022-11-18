@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:background="@drawable/layout_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/pic_random"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:contentDescription="@string/header" />
+        <TextView
+            android:id="@+id/registration_page_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/name"
+            android:textSize="23sp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/registration_page_name_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints=""
+            android:background="@drawable/edit_txt_bg"
+            android:hint="@string/full_name"
+            android:inputType="textPersonName"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            tools:ignore="TextContrastCheck" />
+        <TextView
+            android:id="@+id/registration_page_name_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:textSize="23sp"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/registration_page_newPassword_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textPassword"
+            tools:ignore="TextContrastCheck"
+            tools:layout_editor_absoluteX="90dp"
+            tools:layout_editor_absoluteY="235dp"
+            app:passwordToggleEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/registration_page_newPassword_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:autofillHints=""
+                android:background="@drawable/edit_txt_bg"
+                android:ems="10"
+                android:hint="@string/new_password"
+                android:inputType="textPassword"
+                android:paddingStart="4dp"
+                android:paddingEnd="3dp"
+                android:textColor="@color/black"
+                tools:ignore="TextContrastCheck"
+                tools:layout_editor_absoluteX="110dp"
+                tools:layout_editor_absoluteY="84dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/registration_page_newPassword_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/registration_page_confirmPassword_layout"
+            android:layout_width="match_parent"
+            android:layout_height="71dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textPassword"
+            app:passwordToggleEnabled="true"
+            tools:ignore="TextContrastCheck"
+            tools:layout_editor_absoluteX="90dp"
+            tools:layout_editor_absoluteY="235dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/registration_page_confirmPassword_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="50dp"
+                android:autofillHints=""
+                android:background="@drawable/edit_txt_bg"
+                android:ems="10"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword"
+                android:paddingStart="4dp"
+                android:paddingEnd="3dp"
+                android:textColor="@color/black"
+                tools:ignore="TextContrastCheck"
+                tools:layout_editor_absoluteX="110dp"
+                tools:layout_editor_absoluteY="84dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/registration_page_confirmPassword_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_bg_color"
+            android:drawableEnd="@drawable/icon_next_arrow"
+            android:paddingStart="45dp"
+            android:paddingEnd="10dp"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:textSize="23sp"
+            android:textAlignment="center"
+            android:onClick="next"
+            android:layout_marginBottom="20sp"/>
+
+    </LinearLayout>
+
+</ScrollView>

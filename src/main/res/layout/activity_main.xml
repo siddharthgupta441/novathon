@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:background="@drawable/layout_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="30dp"
+        android:layout_gravity="center"
+        android:gravity="center">
+        <EditText
+            android:id="@+id/login_page_email_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:autofillHints=""
+            android:background="@drawable/edit_txt_bg"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="4dp"
+            android:paddingEnd="3dp"
+            tools:ignore="TextContrastCheck" />
+        <TextView
+            android:id="@+id/login_page_login_email_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/login_page_newPassword_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="textPassword"
+            app:passwordToggleEnabled="true"
+            tools:ignore="TextContrastCheck"
+            tools:layout_editor_absoluteX="90dp"
+            tools:layout_editor_absoluteY="235dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/login_page_Password_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:autofillHints=""
+                android:background="@drawable/edit_txt_bg"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingStart="4dp"
+                android:paddingEnd="3dp"
+                android:textColor="@color/black"
+                tools:ignore="TextContrastCheck"
+                tools:layout_editor_absoluteX="110dp"
+                tools:layout_editor_absoluteY="84dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/login_page_password_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/login_page_login_button"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/button_bg_color"
+            android:text="@string/log_in"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="23sp"
+            android:onClick="login"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:id="@+id/login_page_forgot_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="forgot"
+                android:text="forgot password/email"
+                android:textColor="#F8F3F5"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:layout_weight="1"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:id="@+id/login_page_signIn_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="signIn"
+                android:text="Sign in"
+                android:textColor="#F3F3F4"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:layout_weight="1"
+                android:background="#e2e2e2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="or"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1.5dp"
+                android:layout_weight="1"
+                android:background="#e2e2e2" />
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/main_page_google_signIn_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/icon_google"
+            android:contentDescription="google login"
+            android:onClick="google_signIn"/>
+    </LinearLayout>
+
+</LinearLayout>
